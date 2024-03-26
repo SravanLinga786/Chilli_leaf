@@ -1,0 +1,346 @@
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="chilli.png">
+        <title>Farmer's Portal</title>
+    </head>
+    <style>
+        @font-face {
+            font-family:font1;
+            src: url("font1/font1.ttf");
+        }
+        @font-face {
+            font-family:font2;
+            src: url("font2/font2.ttf");
+        }
+        @font-face {
+            font-family:font3;
+            src: url("font3/font3.ttf");
+        }
+        @font-face {
+            font-family:font4;
+            src: url("font4/font4.ttf");
+        }
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 200vh;
+
+        }
+        .box-img{
+            width: 100%;
+            height: 520px;
+        }
+        form{
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+
+        }
+        .font1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        }
+        .font2{
+            font-family: font1;
+            font-size: 30px;
+            font-weight: bolder;
+            margin:10px 0px 10px 20px;
+            text-align: center;
+        }
+        input::file-selector-button {
+            width: 120px;
+            height: 40px;
+            font-weight: bolder;
+            color: #43F2A8 ;
+            margin-left:10px ;
+            background-color: white;
+            padding: 0.5em;
+            border: none;
+            border-radius: 3px;        
+        }
+        .but{
+            width: 160px;
+            height: 40px;
+            font-weight: bolder;
+            color: white;
+            background-color: #43F2A8;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;  
+            letter-spacing: 1.6px;
+
+        }
+        .but:hover{
+            font-weight: bolder;
+            color: #43F2A8 ;
+            background-color:  white;
+            border: 2px solid #43F2A8;    
+            transition: all 0.6s;        
+
+        }
+        .but2{
+            margin-top:-5px ;
+            width: 120px;
+            height: 40px;
+            font-weight: bolder;
+            color: #43F2A8 ;
+            background-color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;  
+            letter-spacing: 1.6px;
+
+        }
+        .but2:hover{
+            font-weight: bolder;
+            color: white ;
+            background-color:  #43F2A8;
+            border: 2px solid white;
+            transition: all 0.6s;
+        }
+        .banner{
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: url("{{ url_for('static', filename='banner.jpg') }}" );
+            background-size: cover;
+            align-items: center;
+
+        }
+        .img-font{
+            padding-top: 180px;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+
+        }
+        .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:#1b1b1ba1; /* Adjust the overlay color and opacity */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"> </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    
+    <body>
+         <div class="container-fluid">
+            <!-- Header -->
+            <div class="row">
+                <div class="col-lg-12 g-0" style="letter-spacing: 2px">
+                <nav class="navbar fixed-top navbar-expand-lg text-center" style="background-color: #43F2A8;">	
+                     <a href="index.html" class="navbar-brand">	
+                        <img src="{{ url_for('static', filename='chilli.png') }}"  width="55px" height="55px" style="margin: 0px 45px;">
+                     </a>
+                     <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#abcd" >
+                <span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse margin" id="abcd">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item"><a href="diseases.html" class="nav-link"> Diseases </a>
+                      </li>
+                    
+                      <li class="nav-item"><a href="Prevention.html" target="new" class="nav-link "> Prevention </a>
+                      </li>
+                    
+                      <li class="nav-item"><a href="about.html" target="new" class="nav-link"> About </a>						
+                      </li>
+                    
+                      <li class="nav-item"><a href="index.html" target="new" class="nav-link"> Home </a>
+                      </li>
+                    <li class="nav-item">
+                        <a href="Login.html" target="new" class="nav-link"> <button type="button" class="but2">Login</button></a>
+                      </li>
+                  </ul>
+                 </div>				
+               </nav>				
+              </div>
+          </div>            
+          
+          <!-- Content 1-->
+          <div class="row">
+            <div class="col-lg-12 ">
+                
+              <div class="row" style="margin-top: 100px;">
+                <div class="col-lg-12 g-0 mx-auto">
+                    <section class="banner"><div class="img-font text-center">7 things which prevent, control and mitigate chili leaf diseases for farmers.<br><br><br><br><br><br><br><br><br></div></section>
+                
+    
+                    <div class="card-img-overlay">
+                      <h1 class="card-title text-center" style="padding-top: 210px ;color: rgb(255, 255, 255);font-size: 25px;font-weight: bolder;">Prevention</h1>
+                           
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+           
+           <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="p-3 mb-2 bg-light text-dark">
+                <p class="text-center">#1</p>
+                <h1 class="text-center fw-bolder">Well-Drained Soil</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px; font-family: font1;">Ensure proper soil drainage to prevent waterlogged conditions, which can contribute to the development of certain diseases.</p>             
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 g-5">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='crop rotation.png') }}"   class="img-fluid">
+                <div class="overlay">
+                    <p class="white-text" style="font-size: 28px;color: white; text-align: center;margin-top:27%"> #2</p>
+                 </div>
+               </div>
+            </div>
+            <div class="col-lg-6 g-2">
+                <p class="text-center" style="margin-top: 100px;">#2</p>
+                <h1 class="text-center fw-bolder">Crop Rotation</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;line-height: 28px;">Avoid planting chili peppers in the same location every season to reduce the buildup of pathogens in the soil.</p>             
+             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 g-2">
+                <p class="text-center" style="margin-top: 100px;">#3</p>
+                <h1 class="text-center fw-bolder">Sanitation</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;line-height: 28px;">Keep the farming area clean by removing and properly disposing of crop debris, weeds, and any infected plant material.<br>
+Thoroughly clean farming equipment, tools, and containers to prevent the spread of diseases.</p>             
+             </div>
+             <div class="col-lg-6 g-5 mt-4">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='sanitation.jpg') }}"   class="img-fluid">
+                <div class="overlay">
+                    <p class="white-text" style="font-size: 28px;color: white; text-align: center;margin-top:28%"> #3</p>
+                 </div>
+               </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="p-3 mb-2 bg-light text-dark">
+                <p class="text-center">#4</p>
+                <h1 class="text-center fw-bolder">Proper Spacing</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;">Plant chili peppers with adequate spacing to ensure good air circulation, reducing humidity around the plants and minimizing disease spread.</p>             
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 g-5">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='watering.jpg') }}"   class="img-fluid">
+                <div class="overlay">
+                    <p class="white-text" style="font-size: 28px;color: white; text-align: center;margin-top:27%"> #5</p>
+                 </div>
+               </div>
+            </div>
+            <div class="col-lg-6 g-2">
+                <p class="text-center" style="margin-top: 100px;">#5</p>
+                <h1 class="text-center fw-bolder">Proper Watering</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;line-height: 28px;">Water the plants at the base rather than overhead to minimize moisture on the leaves, which can create a favorable environment for diseases.<br>
+                  Use drip irrigation systems to provide consistent moisture without wetting the foliage excessively.</p>             
+             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 g-2">
+                <p class="text-center" style="margin-top: 100px;">#6</p>
+                <h1 class="text-center fw-bolder">Fungicides and Pesticides</h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;line-height: 28px;"> As a last option, consider using fungicides or pesticides labeled for chili peppers if diseases persist and non-chemical methods are insufficient. Follow recommended application rates and safety guidelines. </p>             
+             </div>
+             <div class="col-lg-6 g-5 mt-4">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='pesticide.avif') }}"   class="img-fluid">
+                <div class="overlay">
+                    <p class="white-text" style="font-size: 28px;color: white; text-align: center;margin-top:27%"> #6</p>
+                 </div>
+               </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="p-3 mb-2 bg-light text-dark text-center">
+                <p class="text-center">#7</p>
+                <h1 class="text-center fw-bolder">Pruning </h1>  
+                <p class="text-center" style="text-align: justify; margin:20px 50px;">Prune and remove affected leaves as soon as symptoms appear. This helps prevent the further spread of the disease.</p>             
+                <button class="but" style="margin-top:10px; border-radius: 0px;">Know More</button>
+              </div>
+            </div>
+          </div>
+          <div class="fixed-bottom" style=" position: fixed;bottom: 5%; left:95%;">
+            <a href="#"><img src="{{ url_for('static', filename='up.png') }}" width="30px" height="30px"></a>
+          </div>
+   
+            
+     
+        <!--Footer -->
+        <br><br>
+        <div class="row" style="background-color: #43F2A8;">
+            <div class="col-lg-4 text-center">
+              <img src="{{ url_for('static', filename='chilli.png') }}"  width="50px" height="50px" style="margin-top:100px;">
+              <p style="margin: 10px 20px;">Designed by Sravan and Vardhan. This is a Chilli Leaf Disease Detecting Website designed for farmers to identify the diseases prior.</p>
+
+            </div>
+            <div class="col-lg-2">
+              <ul style="list-style-type: none; margin-top: 70px;">
+                <li style="margin-top: 20px;"><img src="{{ url_for('static', filename='twitter.png') }}"   width="40px" height="40px"></li>
+                <li style="margin-top: 10px;"><h5>About Us</h5></li>
+                <li style="margin-top: 10px;">About</li>
+                <li style="margin-top: 10px;">why? <img src="{{ url_for('static', filename='chilli.png') }}"  width="30px" height="30px"></li>
+                <li style="margin-top: 10px;">Blog</li>
+                <li style="margin-top: 10px;">FAQ</li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul style="list-style-type: none; margin-top: 70px;">
+                <li style="margin-top: 20px;"><img src="{{ url_for('static', filename='instagram.png') }}"   width="40px" height="40px"></li>
+                <li style="margin-top: 10px;"><h5>Know more about Diseases</h5></li>
+                <li style="margin-top: 10px;">Bacterial leaf spot</li>
+                <li style="margin-top: 10px;">Anthracnose</li>
+                <li style="margin-top: 10px;">Upward curl</li>
+                <li style="margin-top: 10px;">Downward curl</li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul style="list-style-type: none; margin-top: 70px;">
+                <li style="margin-top: 20px;"><img src="{{ url_for('static', filename='youtube.png') }}"   width="40px" height="40px"></li>
+                <li style="margin-top: 10px;"><h5>Methods to Prevention</h5></li>
+                <li style="margin-top: 10px;">Precautions</li>
+                <li style="margin-top: 10px;">Knowledge</li>
+                <li style="margin-top: 10px;">T&Cs</li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul style="list-style-type: none; margin-top: 70px;">
+                <li style="margin-top: 20px;"><img src="{{ url_for('static', filename='google.png') }}"   width="40px" height="40px"></li>
+                <li style="margin-top: 10px;"><h5>More</h5></li>
+                <li style="margin-top: 10px;">Careers</li>
+                <li style="margin-top: 10px;">FAQs</li>
+                <li style="margin-top: 10px;">Contact</li>
+              </ul>
+            </div>
+          </div>   
+    </div>
+    </body>
+</html>

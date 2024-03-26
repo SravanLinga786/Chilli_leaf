@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="chilli.png">
+        <title>Farmer's Portal</title>
+    </head>
+    <style>
+        @font-face {
+            font-family:font1;
+            src: url("font1/font1.ttf");
+        }
+        @font-face {
+            font-family:font2;
+            src: url("font2/font2.ttf");
+        }
+        .but2{
+            margin-top:-5px ;
+            width: 120px;
+            height: 40px;
+            font-weight: bolder;
+            color: #43F2A8 ;
+            background-color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;  
+
+        }
+        .but2:hover{
+            font-weight: bolder;
+            color: white ;
+            background-color:  #43F2A8;
+            border: 2px solid white;
+
+        }
+        .font1{
+            font-family: font1;
+            font-size: 30px;
+            font-weight: bolder;
+            background-color: #43F2A8;
+            margin-top: 10px;
+        }
+        form{
+            width: 50%;
+            height: 550px;
+            color: white;
+            background-color: #43F2A8;
+            margin-top: 100px;
+            margin-left: 25%;
+            border: none;
+            border-radius: 20px;
+            
+        }
+        input{
+            margin:10px 0px 5px 50px;
+            width: 50%;
+            height:42px;
+            background-color: white;
+            color:black;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+        .form-cont2{
+            margin:10px 0px 10px 0px;
+            font-size: 10px;
+            color:black;
+            font-family: font4;
+            background-color: #43F2A8;
+            a{
+                color: black;
+                background-color: #43F2A8;
+            }
+            
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"> </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <body>
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-12 g-0" style="letter-spacing: 2px">
+            <nav class="navbar fixed-top navbar-expand-lg text-center" style="background-color: #43F2A8;">	
+                 <a href="index.html" class="navbar-brand">	
+                    <img src="chilli.png" width="55px" height="55px" style="margin: 0px 45px;">
+                 </a>
+                 <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#abcd" >
+            <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse margin" id="abcd">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a href="diseases.html" class="nav-link"> Diseases </a>
+                  </li>
+                
+                  <li class="nav-item"><a href="Prevention.html" target="new" class="nav-link "> Prevention </a>
+                  </li>
+                
+                  <li class="nav-item"><a href="about.html" target="new" class="nav-link"> About </a>						
+                  </li>
+                
+                  <li class="nav-item"><a href="index.html" target="new" class="nav-link"> Home </a>
+                  </li>
+                <li class="nav-item">
+                    <a href="Login.html" target="new" class="nav-link"> <button type="button" class="but2">Login</button></a>
+                  </li>
+              </ul>
+             </div>				
+           </nav>				
+          </div>
+      </div>
+
+
+             <div class="row">
+                <div class="col-lg-12 g-6 text-center">
+                        <form>
+                             <label class="font1">Login</label><br>
+                             <input type="email" placeholder="Sign-in ID(Email Address)" required autofocus style="margin: 50px 0px 20px 0px;"><br>
+                             <input type="password" placeholder="Password" required autofocus><br>
+                             <button class="but2" style="margin: 50px 0px;border: 2px solid #43F2A8;width: 50%; height: 40px;">Login</button>
+                             <br><label class="form-cont2"><u><a href="#">Forgotten your Password</a></u></label>
+                             <br><button class="but2" style="margin: 10px 0px;border: 2px solid #43F2A8;width: 50%; height: 40px;">New User</button>
+                        </form>
+                </div>
+             </div>
+
+
+             <!--Footer-->
+             <br><br><br>
+             <div class="row" style="background-color: #43F2A8;">
+                 <div class="col-lg-4 text-center">
+                   <img src="chilli.png" width="50px" height="50px" style="margin-top:100px;">
+                   <p style="margin: 10px 20px;">Designed by Sravan and Vardhan. This is a Chilli Leaf Disease Detecting Website designed for farmers to identify the diseases prior.</p>
+     
+                 </div>
+                 <div class="col-lg-2">
+                   <ul style="list-style-type: none; margin-top: 70px;">
+                     <li style="margin-top: 20px;"><img src="twitter.png" width="40px" height="40px"></li>
+                     <li style="margin-top: 10px;"><h5>About Us</h5></li>
+                     <li style="margin-top: 10px;">About</li>
+                     <li style="margin-top: 10px;">why? <img src="chilli.png" width="30px" height="30px"></li>
+                     <li style="margin-top: 10px;">Blog</li>
+                     <li style="margin-top: 10px;">FAQ</li>
+                   </ul>
+                 </div>
+                 <div class="col-lg-2">
+                   <ul style="list-style-type: none; margin-top: 70px;">
+                     <li style="margin-top: 20px;"><img src="instagram.png" width="40px" height="40px"></li>
+                     <li style="margin-top: 10px;"><h5>Know more about Diseases</h5></li>
+                     <li style="margin-top: 10px;">Bacterial leaf spot</li>
+                     <li style="margin-top: 10px;">Anthracnose</li>
+                     <li style="margin-top: 10px;">Upward curl</li>
+                     <li style="margin-top: 10px;">Downward curl</li>
+                   </ul>
+                 </div>
+                 <div class="col-lg-2">
+                   <ul style="list-style-type: none; margin-top: 70px;">
+                     <li style="margin-top: 20px;"><img src="youtube.png" width="40px" height="40px"></li>
+                     <li style="margin-top: 10px;"><h5>Methods to Prevention</h5></li>
+                     <li style="margin-top: 10px;">Precautions</li>
+                     <li style="margin-top: 10px;">Knowledge</li>
+                     <li style="margin-top: 10px;">T&Cs - Traveler</li>
+                   </ul>
+                 </div>
+                 <div class="col-lg-2">
+                   <ul style="list-style-type: none; margin-top: 70px;">
+                     <li style="margin-top: 20px;"><img src="google.png" width="40px" height="40px"></li>
+                     <li style="margin-top: 10px;"><h5>More</h5></li>
+                     <li style="margin-top: 10px;">Careers</li>
+                     <li style="margin-top: 10px;">FAQs</li>
+                     <li style="margin-top: 10px;">Contact</li>
+                   </ul>
+                 </div>
+               </div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </body>
+</html>
