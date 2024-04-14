@@ -45,3 +45,14 @@ urllib3==2.2.1
 Werkzeug==3.0.2
 wheel==0.43.0
 wrapt==1.16.0
+beautifulsoup4==4.12.3
+certifi==2024.2.2
+charset-normalizer==3.3.2
+colorama==0.4.6
+filelock==3.13.4
+gdown==5.1.0
+PySocks==1.7.1
+requests==2.31.0
+soupsieve==2.5
+tqdm==4.66.2
+
