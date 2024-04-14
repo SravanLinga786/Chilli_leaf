@@ -8,9 +8,21 @@ from keras.models import load_model
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
+import gdown
 app = Flask(__name__)
 
-model =load_model('model.h5')
+# Define the file ID of your model.h5 file on Google Drive
+file_id = '1s1OdDwNslBdfPzZFHd4E1tyRvx5Sd_Z7'
+
+# Define the URL to download the model from Google Drive
+model_url = f'https://drive.google.com/uc?id={file_id}'
+
+# Define the path where you want to save the downloaded model
+model_path = 'model.h5'
+
+# Download the model from Google Drive
+gdown.download(model_url, model_path, quiet=False)
+
 print('Model loaded. Check http://127.0.0.1:5000/')
 
 labels = {0: 'Anthracnose', 1: 'Gemini', 2: 'Healthy', 3: 'Leaf_curl', 4: 'Leaf_spot', 5: 'Powdery', 6: 'Rust'}
